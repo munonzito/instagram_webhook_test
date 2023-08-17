@@ -8,12 +8,10 @@ const port = 3000;
 app.use(bodyParser.json());
 
 // Ruta para manejar la solicitud POST
-app.post('/webhook', (req, res) => {
-  // Imprimir los datos enviados en el cuerpo de la solicitud
-  console.log('Datos recibidos:', req.body);
-  
-  // Enviar una respuesta al cliente que hizo la solicitud
-  res.send('Datos recibidos correctamente.');
+app.get('/webhook', (req, res) => {
+    //return hub.challenge
+    //hub.verify_token === '123456'
+    console.log(req.query);
 });
 
 app.get('/', (req, res) => {
