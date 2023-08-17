@@ -11,7 +11,8 @@ app.use(bodyParser.json());
 app.get('/webhook', (req, res) => {
     //return hub.challenge
     //hub.verify_token === '123456'
-    console.log(req.query);
+  
+    res.send(req.query['hub.challenge']);
 });
 
 app.get('/', (req, res) => {
