@@ -15,6 +15,13 @@ app.post('/webhook', (req, res) => {
     res.send(req.query['hub.challenge']);
 });
 
+app.post('/paddle', (req, res) => {
+    console.log(req.body);
+    res.send('ok');
+}
+
+    );
+
 app.get('/', (req, res) => {
     res.send('Hola mundo');
 });
